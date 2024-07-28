@@ -7,7 +7,7 @@
   height: 100px;
   margin-top: 20px;
   pointer-events: none; 
-  border: 1px solid white;
+  border: 5px solid #61dafb;
   border-radius: 200%;
   margin-top: 30px;
 }
@@ -28,11 +28,30 @@
   align-items:start;
   justify-content: space-around;
   
-  font-size: calc(10px + 2vmin);
+  font-size: calc(4px + 2vmin);
   color: white;
   border: 5px solid #61dafb ;
   
 }
+
+.texto-blanco {
+  color: white;
+  border: 0;
+  padding: 0;
+
+}
+
+.texto-azul {
+  color: #61dafb;
+  border: 0;
+  padding: 0;
+}
+
+/* 
+span {
+  padding: 0;
+  margin: 0;
+} */
 
 .logo-link {
   display: flex;
@@ -45,16 +64,12 @@
 }
 
 .titulo-proyecto {
-  /* line-height: 50px; */
   margin-left: 30px;
   line-height: 170px;
 }
 
 .App-main {
-  /* height: 100vh; */
-  /* height: calc(100vh - 190px); */
   background-color: #282c34;
-  /* border: 5px solid #61dafb ; */
   padding-bottom: 100px;
 }
 
@@ -80,6 +95,10 @@ label {
   color: #282c34;
 }
 
+.resultado {
+  font-size: 24px;
+  color: white;
+}
 
 
 @keyframes App-logo-spin {

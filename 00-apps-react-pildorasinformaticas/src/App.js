@@ -3,25 +3,28 @@
 //  ***********************************
 
 
-import React from 'react';
+
 import logo from './logo.svg';
 import './App.css';
 import { Titulo } from './components/Titulo.jsx';
-import { ComponenteClase, ComponenteFuncional, Componente } from './components/Componente.jsx';
-import Propiedades from './components/Propiedades.jsx';
+import { UseState } from './components/UseState.jsx';
+import { UseRef } from './components/UseRef.jsx';
+import { ConversorEuroDolar } from './components/ConversorEuroDolar.jsx';
+import { Arrays } from './components/Arrays.jsx';
+import { Contador } from './components/Contador.jsx';
+import { Saludo } from './components/Saludo.jsx';
 
 
-function App() {
+const App = () => {
 
-   const nombre = 'Antonio';
-   const auth = true;
 
-   const estaciones = [
-      'Primavera',
-      'Verano',
-      'Otoño',
-      'Invierno'
-   ];
+   const usuario = {
+      nombre: "Antonio",
+      apellido: "Cutillas",
+      edad: 48,
+      genero: "masculino"
+   }
+
 
    return (
 
@@ -34,7 +37,46 @@ function App() {
                <a className="App-link" href="https://reactjs.org" target="_blank" rel="noopener noreferrer"> React </a>
             </div>
 
-            <h1 className="titulo-proyecto"> React Básicos con CRA </h1>
+            <h1 className="titulo-proyecto">
+
+               <span className='texto-blanco'> C </span>
+               <span className='texto-azul'>   u </span>
+               <span className='texto-blanco'> r </span>
+               <span className='texto-azul'>   s </span>
+               <span className='texto-blanco'> o </span>
+
+               <span className='texto-azul'>   R </span>
+               <span className='texto-blanco'> e </span>
+               <span className='texto-azul'>   a </span>
+               <span className='texto-blanco'> c </span>
+               <span className='texto-azul'>   t </span>
+
+               <span className='texto-blanco'> </span>
+               <span className='texto-blanco'> - </span>
+               <span className='texto-blanco'> </span>
+
+               <span className='texto-azul'>   P </span>
+               <span className='texto-blanco'> i </span>
+               <span className='texto-blanco'> l </span>
+               <span className='texto-azul'>   d </span>
+               <span className='texto-blanco'> o </span>
+               <span className='texto-azul'>   r </span>
+               <span className='texto-blanco'> a </span>
+               <span className='texto-azul'>   s </span>
+               <span className='texto-blanco'> I </span>
+               <span className='texto-azul'>   n </span>
+               <span className='texto-blanco'> f </span>
+               <span className='texto-azul'>   o </span>
+               <span className='texto-blanco'> r </span>
+               <span className='texto-azul'>   m </span>
+               <span className='texto-blanco'> á </span>
+               <span className='texto-azul'>   t </span>
+               <span className='texto-blanco'> i </span>
+               <span className='texto-azul'>   c </span>
+               <span className='texto-blanco'> a </span>
+               <span className='texto-azul'>   s </span>
+
+            </h1>
 
          </header>
 
@@ -42,57 +84,46 @@ function App() {
          <main className="App-main">
 
 
-            {/* **********  1. Sintaxis JSX  ********** */}
-            <Titulo nameTitulo="----------  1. Sintaxis JSX  ----------" />
-
-            <label> <h2> Nombre </h2> </label> <br />
-            <input type="text" /> <br /> <br />
-
-            <h2> {nombre} </h2>
-            <p> {auth ? "El usuario esta Logeado" : "El usuario No esta Logeado"}</p>
-
-            <br /> <p> {2 + 1} </p> <br />
-
-            <ul>
-               {estaciones.map((estacion, index) => <li key={index}> {estacion} </li>)}
-            </ul>
-
-            <hr style={{ marginTop: "50px" }} />
-
-            {/* **********  2. COMPONENTES de Clase y Funcionales  ********** */}
-            <Titulo nameTitulo="----------  2. Componentes de Clase y Funcionales  ----------" />
-
-            <ComponenteClase msg="Hola Soy un Componente de Clase" />
-            <ComponenteFuncional msg="Hola Soy un Componente Funcional desde una Props" />
-            <Componente msg="Soy un Componente Funcional expresado desde una Prop" />
+            {/* **********  1. Use State  ********** */}
+            <Titulo nameTitulo="----------  1. Use State  ----------" />
+            <UseState />
             <hr style={{ marginTop: "50px" }} />
 
 
-            {/* **********  3. PROPIEDADES  ********** */}
-            <Titulo nameTitulo="----------  3. Propiedades  ----------" />
-
-            <Propiedades
-               cadena="Esto es una Cadena"
-               numero={19}
-               booleano={true}
-               arreglo={[1, 2, 3]}
-               objeto={{
-                  nombre: 'Antonio',
-                  correo: 'tonifrancuti@gmail.com'
-               }}
-               funcion={numero => numero * numero}
-               reactElement={<i> Esto es un Elemento de React - JSX </i>}
-               reactComponent={<Componente msg="Soy un Componente pasado como Prop" />}
-
-            />
-
+            {/* **********  2. Use Ref  ********** */}
+            <Titulo nameTitulo="----------  2. Use Ref  ----------" />
+            <UseRef />
             <hr style={{ marginTop: "50px" }} />
 
+
+            {/* **********  3. Conversor Euro Dolar  ********** */}
+            <Titulo nameTitulo="----------  3. Conversor Euro Dolar  ----------" />
+            <ConversorEuroDolar />
+            <hr style={{ marginTop: "50px" }} />
+
+
+            {/* **********  4. Arrays  ********** */}
+            <Titulo nameTitulo="----------  4. Arrays  ----------" />
+            <Arrays />
+            <hr style={{ marginTop: "50px" }} />
+
+
+            {/* **********  5. Trabajo con Componentes I  ********** */}
+            <Titulo nameTitulo="----------  5. Trabajo con Componentes I  ----------" />
+            <Contador />
+            <hr style={{ marginTop: "50px" }} />
+
+
+            {/* **********  6. Trabajo con Componentes II  ********** Utilizando Props  **********/}
+            <Titulo nameTitulo="----------  6. Trabajo con Componentes II - Props  ----------" />
+            <Saludo usuario={usuario} />
+            <hr style={{ marginTop: "50px" }} />
 
          </main>
 
       </div>
    );
 }
+
 
 export default App;
