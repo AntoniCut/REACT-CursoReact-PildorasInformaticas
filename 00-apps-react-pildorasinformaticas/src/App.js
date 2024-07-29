@@ -13,8 +13,14 @@ import { ConversorEuroDolar } from './components/ConversorEuroDolar.jsx';
 import { Arrays } from './components/Arrays.jsx';
 import { Contador } from './components/Contador.jsx';
 import { Saludo } from './components/Saludo.jsx';
+import { RenderizadoCondicional }from './components/RenderizadoCondicional.jsx';
 
 
+
+/**
+ * 
+ * @returns {JSX.Element}
+ */
 const App = () => {
 
 
@@ -25,6 +31,12 @@ const App = () => {
       genero: "masculino"
    }
 
+   const usuario2 = {
+      nombre: "Antonio",
+      apellido: "Cutillas",
+      edad: 48,
+      genero: "masculino"
+   }
 
    return (
 
@@ -117,6 +129,12 @@ const App = () => {
             {/* **********  6. Trabajo con Componentes II  ********** Utilizando Props  **********/}
             <Titulo nameTitulo="----------  6. Trabajo con Componentes II - Props  ----------" />
             <Saludo usuario={usuario} />
+            <hr style={{ marginTop: "50px" }} />
+
+
+            {/* **********  7. Renderizado Condicional  **********/}
+            <Titulo nameTitulo="----------  7. Renderizado Condicional  ----------" />
+            <RenderizadoCondicional usuario2={usuario2} />
             <hr style={{ marginTop: "50px" }} />
 
          </main>

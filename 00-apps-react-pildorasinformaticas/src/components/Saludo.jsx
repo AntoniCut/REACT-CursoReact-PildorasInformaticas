@@ -20,26 +20,28 @@ import PropTypes from "prop-types";
 
 export const Saludo = (props) => {
 
-  return (
+   return (
 
-    <div>
-      <h1> Hola {props.usuario.nombre} { props.usuario.apellido} !!! </h1> 
-      <p> Tienes { props.usuario.edad} años </p>
-      <p> y de genero <strong> { props.usuario.genero} </strong> </p>
-    </div>
+      <div>
 
-  )
+           <h1> Hola {props.usuario.nombre} {props.usuario.apellido} !!! </h1>
+           <p> Tienes {props.usuario.edad} años </p>
+           <p> y de genero <strong> {props.usuario.genero} </strong> </p>
+
+      </div>
+
+   )
 
 }
 
 
 //  *****  Validacion de 'props'  *****
 Saludo.propTypes = {
-  
-  usuario:PropTypes.shape({
-    nombre:PropTypes.string.isRequired,
-    edad:PropTypes.number.isRequired
 
-  }).isRequired
+   usuario: PropTypes.shape({
+      nombre: PropTypes.string.isRequired,
+      edad: PropTypes.number.isRequired
+
+   }).isRequired
 
 }
