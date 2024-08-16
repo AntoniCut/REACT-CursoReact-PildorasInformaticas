@@ -1,28 +1,43 @@
+/*  ***********************************************************************  */
+/*  **********  /00-apps-react-pildorasinformaticas/src/App.css  **********  */
+/*  ***********************************************************************  */
+
+@import './HeaderComponent/css/headerComponent.css';
+@import './HeaderComponent/css/headerResponsive.css';
+@import './HeaderComponent/css/logoAplicacion.css';
+@import './HeaderComponent/css/logoReact.css';
+@import './HeaderComponent/css/tituloAplicacion.css';
+@import './css/ejercicio-practico-1.css';
+
+
+* {
+  box-sizing: border-box;
+}
+
 .App {
   text-align: center;
 }
 
-.App-logo {
-  /* height: 40vmin; */
+
+/* .App-logo {
   height: 100px;
   margin-top: 20px;
   pointer-events: none; 
   border: 5px solid #61dafb;
   border-radius: 200%;
   margin-top: 30px;
-}
+} */
 
-@media (prefers-reduced-motion: no-preference) {
+/* @media (prefers-reduced-motion: no-preference) {
   .App-logo {
     animation: App-logo-spin infinite 15s linear;
   }
-}
+} */
 
-.App-header {
+/* .App-header {
   display: flex;
   background-color: #282c34;
   height: 170px;
-  /* min-height: 100vh; */
   display: flex;
   flex-direction: row;
   align-items:start;
@@ -45,7 +60,7 @@
   color: #61dafb;
   border: 0;
   padding: 0;
-}
+} */
 
 /* 
 span {
@@ -53,7 +68,7 @@ span {
   margin: 0;
 } */
 
-.logo-link {
+/* .logo-link {
   display: flex;
 }
 
@@ -66,7 +81,7 @@ span {
 .titulo-proyecto {
   margin-left: 30px;
   line-height: 170px;
-}
+} */
 
 .App-main {
   background-color: #282c34;
@@ -101,11 +116,14 @@ label {
 }
 
 
-@keyframes App-logo-spin {
+/* @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);
   }
   to {
     transform: rotate(360deg);
-  }
-}
+  } 
+} */
+
+
+
