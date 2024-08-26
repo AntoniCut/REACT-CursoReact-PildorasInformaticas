@@ -4,7 +4,7 @@
 
 
 import { useState } from "react";
-import { ComponenteMultiple } from "./ComponenteMultiple";
+import { ComponenteMultiple } from "./08-ComponenteMultiple";
 
 
 export const EjercicioPractico1 = () => {
@@ -37,3 +37,5 @@ export const EjercicioPractico1 = () => {
         </div>
     )
 }
+
+

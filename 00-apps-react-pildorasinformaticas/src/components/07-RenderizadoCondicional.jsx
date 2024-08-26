@@ -3,9 +3,6 @@
 //  *************************************************
 
 
-//import PropTypes from "prop-types";
-
-
 
 /**
  * -----  Componente Saludo  -----
@@ -18,11 +15,13 @@
  * @returns {JSX.Element} Elemento JSX que representa el saludo.
  */
 
-export const RenderizadoCondicional = (props) => {
+export const RenderizadoCondicional = ( props ) => {
 
 
    // ----------  Desestructuracion de Objetos  ----------
    const { nombre, apellido, edad, genero } = props.usuario2;
+
+   console.log(nombre, apellido, edad, genero);
 
    return (
 
@@ -34,8 +33,8 @@ export const RenderizadoCondicional = (props) => {
             nombre && apellido ?
                (<>
                   <h1> Hola {nombre} {apellido} !!! </h1>
-                  <p> Tienes {edad} años </p>
-                  <p> y de genero <strong> {genero} </strong> </p>
+                  <h2> Tienes {edad} años </h2>
+                  <h2> y de genero <strong> {genero} </strong> </h2>
                </>)
 
                :

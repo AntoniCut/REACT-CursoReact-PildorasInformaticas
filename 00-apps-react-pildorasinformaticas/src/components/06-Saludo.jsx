@@ -25,8 +25,8 @@ export const Saludo = (props) => {
       <div>
 
            <h1> Hola {props.usuario.nombre} {props.usuario.apellido} !!! </h1>
-           <p> Tienes {props.usuario.edad} años </p>
-           <p> y de genero <strong> {props.usuario.genero} </strong> </p>
+           <h2> Tienes {props.usuario.edad} años </h2>
+           <h2> y de genero <strong> {props.usuario.genero} </strong> </h2>
 
       </div>
 
